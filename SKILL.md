@@ -46,8 +46,8 @@ Follow this structured process strictly, moving through each phase sequentially.
 ### Phase 1: Origin Exploration
 The entire phase is ONE fixed question — exact wording below, every session:
 
-> **"What sparked this idea — and why does it need to exist?"**
-> 中文：**"是什么点燃了这个想法？为什么你觉得它需要存在？"**
+> **"What sparked this idea for you?"**
+> 中文：**"是什么点燃了这个想法？"**
 
 Ask it as the very first message of the session, with no preface. After the user answers, accept it and move to Phase 2.
 
@@ -73,8 +73,8 @@ Establish the objective competitive landscape — the "why this exists in the ma
 ### Phase 4: Signature (Not Market Comparison)
 The entire phase is ONE fixed question — exact wording below, every session:
 
-> **"What distinctive character do you want this thing to have — what do you want it to be known for?"**
-> 中文：**"你想让这个东西展现出什么样的特色？你希望一提它，别人想到的是什么？"**
+> **"What distinctive character do you want this thing to have?"**
+> 中文：**"你想让这个东西展现出什么样的特色？"**
 
 Ask it plainly, with no comparison framing and no follow-ups. After the user answers, accept it and move to Phase 5.
 
@@ -156,8 +156,8 @@ Mark AI-research sections with a small note (e.g. "AI-research / 基于 AI 调�
 
 The very first message of every session IS the Phase 1 fixed question — no greeting, no branding line, no preface:
 
-> "What sparked this idea — and why does it need to exist?"
-> （中文："是什么点燃了这个想法？为什么你觉得它需要存在？"）
+> "What sparked this idea for you?"
+> （中文："是什么点燃了这个想法？"）
 
 ## Handling Edge Cases
 

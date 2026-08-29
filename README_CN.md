@@ -54,7 +54,7 @@ cd your-project && git clone https://github.com/smalldog-1/spark-clarity.git .pi
 
 ### 典型对话流程
 
-**AI**: **是什么点燃了这个想法？为什么你觉得它需要存在？**（固定问话）
+**AI**: **是什么点燃了这个想法？**（固定问话）
 
 **你**: [描述你的想法起源...]
 
