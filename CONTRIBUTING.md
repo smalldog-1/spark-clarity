@@ -24,7 +24,7 @@
 
 ### 改进核心 Skill
 
-如果你想改进 `spark-clarity.md` 本身：
+如果你想改进 `SKILL.md` 本身：
 
 1. Fork 仓库
 2. 创建特性分支 (`git checkout -b feature/improvement`)

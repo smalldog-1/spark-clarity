@@ -34,11 +34,24 @@ Unlike traditional brainstorming or consensus tools (like "grill me"), Spark Cla
 
 ## Getting Started
 
-### Using with Claude
+### Installing as a standard skill
 
-1. Add `spark-clarity.md` to your Claude project knowledge base
+This repo IS the skill directory. Clone it into a pi skill location and it is discovered automatically:
+
+```bash
+# global (user-wide)
+git clone https://github.com/smalldog-1/spark-clarity.git ~/.pi/agent/skills/spark-clarity
+# or project-level
+cd your-project && git clone https://github.com/smalldog-1/spark-clarity.git .pi/skills/spark-clarity
+```
+
+Then start a conversation; pi loads the skill when your idea matches its description, or force it with `/skill:spark-clarity`. Works in any Agent Skills-compatible harness (Claude Code: `~/.claude/skills/`).
+
+### Using without installing
+
+1. Paste the contents of `SKILL.md` into a fresh conversation
 2. Start a new conversation - AI will guide you through the process
-3. Answer questions step by step
+3. Answer questions step by step (the Q&A phases)
 4. Receive a complete analysis document
 
 See [GETTING_STARTED.md](./GETTING_STARTED.md) for detailed instructions.

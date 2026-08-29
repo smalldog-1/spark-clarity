@@ -32,11 +32,24 @@ Spark Clarity 是一个系统化的想法澄清助手，通过结构化的提问
 
 ## 使用方法
 
-### 在 Claude 中使用
+### 作为标准 skill 安装
 
-1. 将 `spark-clarity.md` 的内容作为自定义指令或项目知识库添加到 Claude
-2. 开始新对话，AI 会自动引导你完成整个流程
-3. 按照提示一步步回答问题
+本仓库本身就是 skill 目录。把它 clone 到 pi 的 skill 目录即可被自动发现：
+
+```bash
+# 全局安装（当前用户所有项目可用）
+git clone https://github.com/smalldog-1/spark-clarity.git ~/.pi/agent/skills/spark-clarity
+# 项目级安装
+cd your-project && git clone https://github.com/smalldog-1/spark-clarity.git .pi/skills/spark-clarity
+```
+
+然后开始新对话：当你的表达匹配 skill 描述时 pi 会自动加载，也可以强制加载 `/skill:spark-clarity`。兼容所有支持 Agent Skills 标准的工具（Claude Code：`~/.claude/skills/`）。
+
+### 不安装直接使用
+
+1. 把 `SKILL.md` 的内容粘贴进一段新对话
+2. 开始对话，AI 会自动引导你完成整个流程
+3. 按照提示一步步回答（问答阶段）
 4. 最终获得一份完整的想法分析文档
 
 ### 典型对话流程

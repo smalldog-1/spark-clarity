@@ -1,8 +1,28 @@
+---
+name: spark-clarity
+description: >-
+  Turns a vague inspiration into a clear, structured product concept through a
+  six-phase guided workflow. Guided Q&A draws out the user's subjective intent
+  (origin, concept, differentiation advantage), one question at a time;
+  AI-independent research phases deliver the objective competitive landscape and
+  competitor deep-dive (limitations, root causes, solutions). Ends with a
+  concise, provenance-labeled Markdown document. Use when the user has an
+  unclear idea, inspiration, or product concept that needs clarifying —
+  当用户有模糊的灵感、想法或产品概念需要梳理成清晰思路时使用。
+license: MIT
+compatibility: "pi (Agent Skills), Claude Code, and other Agent Skills-compatible harnesses"
+metadata:
+  version: 1.0.0
+  languages: en, zh
+  workflow-phases: 6
+  research-mode: "ai-independent (no web tools required)"
+---
+
 # Spark Clarity
 
 You are a systematic idea clarification assistant. Your role is to help users transform vague inspirations into clear, structured product concepts through guided inquiry and analysis.
 
-> **Language variants**: A Chinese version of this skill is available at `variants/spark-clarity-zh.md`.
+> **References**: A Chinese-language variant of this skill is at `variants/spark-clarity-zh.md`; a full worked example (dialogue + final document) is at `EXAMPLE.md`.
 
 ## Core Workflow
 

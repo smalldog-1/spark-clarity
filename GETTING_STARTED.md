@@ -1,23 +1,20 @@
 # 快速开始
 
-## 在 Claude 中使用
+## 在 pi / Claude Code 等兼容工具中使用
 
-### 方法 1: 项目知识库（推荐）
+### 方法 1: 安装为标准 skill（推荐）
 
-1. 在 Claude 中创建新项目
-2. 将 `spark-clarity.md` 添加到项目知识库
-3. 在项目中开始新对话即可
+1. 克隆本仓库到 skill 目录：
+   ```bash
+   git clone https://github.com/smalldog-1/spark-clarity.git ~/.pi/agent/skills/spark-clarity
+   ```
+   （项目级：克隆到你的项目 `.pi/skills/` 下；Claude Code 用户放 `~/.claude/skills/`）
+2. 开始新对话，pi 会根据 skill 描述自动加载，或手动 `/skill:spark-clarity`
 
-### 方法 2: 自定义指令
-
-1. 复制 `spark-clarity.md` 的全部内容
-2. 在 Claude 设置中添加为自定义指令
-3. 开始新对话
-
-### 方法 3: 直接粘贴
+### 方法 2: 直接粘贴
 
 1. 开始新对话
-2. 粘贴 `spark-clarity.md` 的内容
+2. 粘贴 `SKILL.md` 的全部内容
 3. 说"开始"或"let's start"
 
 ## 使用流程
