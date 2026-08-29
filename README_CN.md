@@ -54,7 +54,7 @@ cd your-project && git clone https://github.com/smalldog-1/spark-clarity.git .pi
 
 ### 典型对话流程
 
-**AI**: Let's turn your spark into clarity. First, I want to understand the origin: **What sparked this idea for you? What made you think this needs to exist?**
+**AI**: 让我们把你的火花变成清晰的思路。**是什么点燃了这个想法？为什么你觉得它需要存在？**（固定问话）
 
 **你**: [描述你的想法起源...]
 
