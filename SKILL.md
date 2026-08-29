@@ -3,7 +3,7 @@ name: spark-clarity
 description: >-
   Turns a vague inspiration into a clear, structured product concept through a
   six-phase guided workflow. Guided Q&A draws out the user's subjective intent
-  (origin, concept, differentiation advantage), one question at a time;
+  (origin, concept, signature), one question at a time;
   AI-independent research phases deliver the objective competitive landscape and
   competitor deep-dive (limitations, root causes, solutions). Ends with a
   concise, provenance-labeled Markdown document. Use when the user has an
@@ -35,7 +35,7 @@ Follow this structured process strictly, moving through each phase sequentially.
 | 1 Origin | Q&A with user | Subjective — only the user knows it |
 | 2 Concept | Q&A with user | The user's own idea; extraction by questioning |
 | 3 Landscape | **AI-independent** | Objective research — your knowledge breadth |
-| 4 Differentiation | Q&A with user | The user's perceived advantages |
+| 4 Signature | Q&A with user | The user's self-expression — what they want it to stand for |
 | 5 Deep-dive | **AI-independent** | Objective analysis of the market |
 | 6 Synthesis | AI composes the document | Merges both sources |
 
@@ -68,11 +68,14 @@ Establish the objective competitive landscape — the "why this exists in the ma
 
 **Optional correction**: After presenting, you may invite a one-line correction ("tell me if any of this differs from what you know") — but do not open a Q&A. The research is yours to deliver.
 
-### Phase 4: Differentiation Analysis
-Ask the user to articulate their perceived advantages:
-- "What do you see as the unique value or advantage of your approach?"
-- "What would make someone choose this over existing solutions?"
-- "What can this do that others cannot, or do better?"
+### Phase 4: Signature (Not Market Comparison)
+Help the user articulate the distinctive character they WANT their idea to have — what draws them to it, what they would be proud of, what they most want it to stand for. This is self-expression. **Do NOT frame it as a comparison against existing products** — market comparison is objective work for Phases 3/5 and the final document, and the user's signature needs no reference to competitors.
+
+Questions to draw it out:
+- "What is the most distinctive or compelling aspect of this idea to you?"
+- "What would make you proud of it if it already existed?"
+- "What is the one thing you most want it to be known for?"
+- "If it worked perfectly, what would it feel like?"
 
 ### Phase 5: Competitive Deep-Dive (AI-Independent)
 Analyze every competitor in the landscape — limitations, root causes, and possible solutions. **Perform this phase entirely by yourself, without Q&A with the user.**
@@ -104,8 +107,8 @@ Generate a comprehensive markdown document with the following structure:
 ## 🌍 Competitive Landscape
 [List of similar products/solutions with brief descriptions]
 
-## ⚡ Differentiation & Advantages
-[What makes this unique or better]
+## ✨ Signature & Vision
+[What the user wants this idea to stand for — restated in their own words]
 - [Key differentiator 1]
 - [Key differentiator 2]
 - [Key differentiator 3]
@@ -135,7 +138,7 @@ Generate a comprehensive markdown document with the following structure:
 - Avoid fluff or repetition
 
 **Content provenance**: The document draws on two distinct sources. Keep them clearly bounded:
-- **User-sourced** (Phases 1, 2, 4): origin, motivation, core concept, advantages. Restate and organize what the user actually said; never invent.
+- **User-sourced** (Phases 1, 2, 4): origin, motivation, core concept, signature. Restate and organize what the user actually said; never invent.
 - **AI-research** (Phases 3, 5): competitive landscape, limitations, root causes, possible solutions. You are authoritative here — write the analysis in your own words rather than fabricating user agreement.
 
 Mark AI-research sections with a small note (e.g. "AI-research / 基于 AI 调研") so the user can see which parts are independent analysis rather than their own claims.
