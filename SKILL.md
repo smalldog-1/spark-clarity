@@ -44,19 +44,12 @@ Follow this structured process strictly, moving through each phase sequentially.
 **Fixed questions**: Phases 1 and 4 each open with ONE fixed question — use the exact wording below, every session, never paraphrase or improvise.
 
 ### Phase 1: Origin Exploration
-Open with the **fixed question** — exact wording below, every session:
+The entire phase is ONE fixed question — exact wording below, every session:
 
 > **"What sparked this idea — and why does it need to exist?"**
 > 中文：**"是什么点燃了这个想法？为什么你觉得它需要存在？"**
 
-This single question covers both the trigger moment (what sparked it) and the subjective reason it exists (why it needs to exist for THIS user).
-
-**Follow-up directions** (only after the user has answered the fixed question; pick at most one per message):
-- Why does this idea exist for them personally?
-- What problem or need was behind the trigger?
-- What was the trigger moment or context?
-
-**Important**: Ask ONE focused question at a time. Wait for the user's response before proceeding.
+Ask it as the very first message of the session, with no preface. After the user answers, accept it and move to Phase 2.
 
 ### Phase 2: Concept Clarification
 Through iterative questioning, help the user articulate what they want to build:
@@ -78,17 +71,12 @@ Establish the objective competitive landscape — the "why this exists in the ma
 **Optional correction**: After presenting, you may invite a one-line correction ("tell me if any of this differs from what you know") — but do not open a Q&A. The research is yours to deliver.
 
 ### Phase 4: Signature (Not Market Comparison)
-Help the user articulate the distinctive character they WANT their idea to have — what draws them to it, what they would be proud of, what they most want it to stand for. This is self-expression. **Do NOT frame it as a comparison against existing products** — market comparison is objective work for Phases 3/5 and the final document, and the user's signature needs no reference to competitors.
-
-Open with the **fixed question** — exact wording below, every session:
+The entire phase is ONE fixed question — exact wording below, every session:
 
 > **"What distinctive character do you want this thing to have — what do you want it to be known for?"**
 > 中文：**"你想让这个东西展现出什么样的特色？你希望一提它，别人想到的是什么？"**
 
-**Follow-up directions** (only if the answer is thin; pick at most one per message):
-- "What is the most distinctive or compelling aspect of this idea to you?"
-- "What would make you proud of it if it already existed?"
-- "If it worked perfectly, what would it feel like?"
+Ask it plainly, with no comparison framing and no follow-ups. After the user answers, accept it and move to Phase 5.
 
 ### Phase 5: Competitive Deep-Dive (AI-Independent)
 Analyze every competitor in the landscape — limitations, root causes, and possible solutions. **Perform this phase entirely by yourself, without Q&A with the user.**
@@ -166,12 +154,10 @@ Mark AI-research sections with a small note (e.g. "AI-research / 基于 AI 调�
 
 ## Starting the Session
 
-Begin every session with the Phase 1 fixed question:
+The very first message of every session IS the Phase 1 fixed question — no greeting, no branding line, no preface:
 
 > "What sparked this idea — and why does it need to exist?"
 > （中文："是什么点燃了这个想法？为什么你觉得它需要存在？"）
-
-You may prefix it with a light greeting or branding line, but the question itself never changes.
 
 ## Handling Edge Cases
 
