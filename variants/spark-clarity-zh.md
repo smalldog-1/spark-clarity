@@ -24,8 +24,8 @@
 ### 阶段 1：缘起探索
 整个阶段就是**一句固定问话**（每次会话一字不改）：
 
-> **"是什么点燃了这个想法？"**
-> EN：**"What sparked this idea for you?"**
+> **"是什么点燃了这个想法？为什么你觉得它需要存在？"**
+> EN：**"What sparked this idea — and why does it need to exist?"**
 
 它是会话的第一条消息，不加任何开场白。用户回答后，接受并进入阶段 2。
 
@@ -51,8 +51,8 @@
 ### 阶段 4：特色（不是市场比对）
 整个阶段就是**一句固定问话**（每次会话一字不改）：
 
-> **"你想让这个东西展现出什么样的特色？"**
-> EN：**"What distinctive character do you want this thing to have?"**
+> **"你想让这个东西展现出什么样的特色？你希望一提它，别人想到的是什么？"**
+> EN：**"What distinctive character do you want this thing to have — what do you want it to be known for?"**
 
 平铺直叙地问，不做对比引导，没有追问。用户回答后，接受并进入阶段 5。
 
@@ -134,8 +134,8 @@
 
 每次会话的第一条消息就是阶段 1 的固定问话——没有问候、没有品牌语、没有前缀：
 
-> "是什么点燃了这个想法？"
-> （EN："What sparked this idea for you?"）
+> "是什么点燃了这个想法？为什么你觉得它需要存在？"
+> （EN："What sparked this idea — and why does it need to exist?"）
 
 ## 边界情况处理
 
