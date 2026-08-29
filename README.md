@@ -8,7 +8,7 @@ Transform vague inspirations into clear, structured concepts with AI-guided inqu
 
 Spark Clarity is a systematic idea clarification assistant that helps you organize fuzzy inspirations into clear, comprehensive product concepts through structured questioning and analysis.
 
-Unlike traditional brainstorming or consensus tools (like "grill me"), Spark Clarity focuses on **structuring unclear ideas** through a defined workflow that guides you to:
+Unlike traditional brainstorming or consensus tools (like "grill me"), Spark Clarity runs a **two-mode workflow**: **guided Q&A** for the parts only you know (origin, concept, your perceived advantages) and **independent AI research** for the objective parts (competitive landscape, competitor weaknesses, root causes, solutions) — precisely because if you could already analyze the market yourself, you would not need this conversation. It guides you to:
 - Explore the origin and motivation behind your idea
 - Clarify the core concept (appropriate abstraction, avoiding premature details)
 - Understand the competitive landscape
@@ -19,17 +19,17 @@ Unlike traditional brainstorming or consensus tools (like "grill me"), Spark Cla
 ## Workflow
 
 ```
-1. Origin Exploration → Why does this idea exist?
+1. Origin Exploration → Why does this idea exist?         [Q&A]
           ↓
-2. Concept Clarification → What do you want to build? (appropriate granularity)
+2. Concept Clarification → What do you want to build?     [Q&A]
           ↓
-3. Landscape Mapping → What similar products exist?
+3. Landscape Mapping → AI research: similar products & why [AI]
           ↓
-4. Differentiation Analysis → What's your unique value?
+4. Differentiation Analysis → Your unique value?          [Q&A]
           ↓
-5. Competitive Deep-Dive → Pain points, root causes, solutions
+5. Competitive Deep-Dive → Pain points, root causes, solutions [AI]
           ↓
-6. Documentation → Generate structured Markdown report
+6. Documentation → Structured Markdown report             [AI]
 ```
 
 ## Getting Started
@@ -45,10 +45,11 @@ See [GETTING_STARTED.md](./GETTING_STARTED.md) for detailed instructions.
 
 ## Features
 
+- **Two-Mode Division**: Q&A for your subjective insights; independent AI research for market facts — never mixed
 - **Systematic Process**: Six clear phases, not random conversation
 - **Appropriate Granularity**: Avoid premature implementation details
-- **Competitive Insights**: Understand market landscape and opportunities
-- **Structured Output**: Auto-generated, ready-to-use analysis reports
+- **Credible Competitive Research**: AI delivers the landscape and deep-dive from its own knowledge (marked ⚡ AI-research)
+- **Structured Output**: Auto-generated, ready-to-use analysis reports with provenance labels
 - **Focused Interaction**: One question at a time for efficient dialogue
 
 ## Output Example
