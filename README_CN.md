@@ -79,7 +79,7 @@ cd your-project && git clone https://github.com/smalldog-1/spark-clarity.git .pi
 - 🎯 缘起与动机
 - 💡 核心概念（目标用户、核心价值、关键场景）
 - 🌍 竞争格局
-- ⚡ 差异化分析与市场定位（AI 调研：想法在竞争中的位置）
+- ✨ 特色与愿景（来自用户）
 - 🔍 竞品分析（痛点、根因、解决方案）
 - 🚀 战略定位
 - 📋 关键洞察
