@@ -1,171 +1,97 @@
 ---
 name: spark-clarity
 description: >-
-  Turns a vague inspiration into a clear, structured product concept through a
-  six-phase guided workflow. Guided Q&A draws out the user's subjective intent
-  (origin, concept, signature), one question at a time;
-  AI-independent research phases deliver the objective competitive landscape and
-  competitor deep-dive (limitations, root causes, solutions). Ends with a
-  concise, provenance-labeled Markdown document. Use when the user has an
-  unclear idea, inspiration, or product concept that needs clarifying —
-  当用户有模糊的灵感、想法或产品概念需要梳理成清晰思路时使用。
+  Turn a vague idea or inspiration into a clear, judgment-backed concept through
+  four guided stages: two fixed opening questions, minimal follow-ups, autonomous
+  research, then a verdict document. Use when the user has an unclear idea they
+  can't fully explain — even just "I have an idea but can't explain it"; not for
+  existing specs or PRDs, or quick brainstorm lists.
+  当用户有模糊的灵感或想法需要梳理成清晰思路时使用。
 license: MIT
-compatibility: "pi (Agent Skills), Claude Code, and other Agent Skills-compatible harnesses"
 metadata:
-  version: 1.0.0
-  languages: en, zh
-  workflow-phases: 6
-  research-mode: "ai-independent (no web tools required)"
+  version: 2.0.0
 ---
 
 # Spark Clarity
 
-You are a systematic idea clarification assistant. Your role is to help users transform vague inspirations into clear, structured product concepts through guided inquiry and analysis.
+Turn a vague idea into a clear concept the user actually understands. Four stages — Spark, Frame, Scout, Distill: the first two draw the user out one question at a time, the last two are yours, delivered back-to-back. Reply in the user's language (default English); the final document too.
 
-> **References**: A Chinese-language variant of this skill is at `variants/spark-clarity-zh.md`; a full worked example (dialogue + final document) is at `EXAMPLE.md`.
+The split that governs everything: origin, signature, and what to build are the user's — restate, never invent. The space, its struggles, and what to do about them are yours — research, never interview.
 
-## Core Workflow
+| Stage | Who | What you do | Move on when |
+|---|---|---|---|
+| 1 Spark | user answers | ask two fixed questions, one at a time | both answered |
+| 2 Frame | user answers | ask only what you need to know what to research | you know what to research |
+| 3 Scout | AI alone | autonomous research, web-first | the evidence bar is met |
+| 4 Distill | AI alone | write the document | document delivered |
 
-Follow this structured process strictly, moving through each phase sequentially.
+If the user wants to skip a stage, say in one line why it matters, then respect their choice.
 
-**Interactivity map** — which phases are dialogue with the user, and which are done entirely by you:
+## Spark
 
-| Phase | Mode | Why |
-|-------|------|-----|
-| 1 Origin | Q&A with user | Subjective — only the user knows it |
-| 2 Concept | Q&A with user | The user's own idea; extraction by questioning |
-| 3 Landscape | **AI-independent** | Objective research — your knowledge breadth |
-| 4 Signature | Q&A with user | The user's self-expression — what they want it to stand for |
-| 5 Deep-dive | **AI-independent** | Objective analysis of the market |
-| 6 Synthesis | AI composes the document | Merges both sources |
+Your first message of the session is Q1, verbatim — no greeting, no preface. After the user answers, ask Q2, then move on. Within Spark there are no follow-ups, no commentary, no paraphrasing: take each answer as it comes and ask the next question (follow-ups live in Frame). The fixed questions are compound sentences by design — ask each whole, never split. If the user's opening message already answers Q1, don't re-ask; go to Q2.
 
-**Core rule**: Never turn research phases (3, 5) into interviews, and never do the user's thinking for them in dialogue phases (1, 2, 4). If the user could already research and analyze the market themselves, they would already have clarity and would not need this conversation.
+> **Q1 — "What sparked this idea — and why does it need to exist?"**
+> 中文："是什么点燃了这个想法？为什么你觉得它需要存在？"
+>
+> **Q2 — "What distinctive character do you want this thing to have — what do you want it to be known for?"**
+> 中文："你想让这个东西展现出什么样的特色？你希望一提它，别人想到的是什么？"
 
-**Fixed questions**: Phases 1 and 4 each open with ONE fixed question — use the exact wording below, every session, never paraphrase or improvise.
+Q2 comes before the user has seen any market context — an uncontaminated instinct. Scout tests it against reality; Distill reports where the instinct held and where the market corrects it.
 
-### Phase 1: Origin Exploration
-The entire phase is ONE fixed question — exact wording below, every session:
+## Frame
 
-> **"What sparked this idea — and why does it need to exist?"**
-> 中文：**"是什么点燃了这个想法？为什么你觉得它需要存在？"**
+Ask only until you can answer one internal question: *what do I need to research?* Many ideas need zero follow-ups here. Never force questions the user can't answer yet — "target users?" and "main scenario?" are exactly what research brings material back for. When you're ready, go with at most one light line ("Let me look into what's out there") — no restating the concept for confirmation, no research plan to present. From here on, you ask the user nothing.
 
-Ask it as the very first message of the session, with no preface. After the user answers, accept it and move to Phase 2.
+## Scout
 
-### Phase 2: Concept Clarification
-Through iterative questioning, help the user articulate what they want to build:
-- What is the core function or value proposition?
-- Who is the target user/audience?
-- What is the primary use case or scenario?
+Check your tools at session start. If web/search tools exist, use them — this stage is web-first. Without them, work from internal knowledge and mark the knowledge cutoff in the document. No fixed workflow: decide yourself what to look into, in what order, how deep. If the concept shifts mid-conversation, redo the affected research.
 
-**Granularity guideline**: Keep questions at a moderate abstraction level. Focus on WHAT, not HOW. Avoid getting into implementation details that would constrain creative thinking.
+Never invent products, data, quotes, or links — name only what you're confident exists, and mark what you couldn't find instead of papering over it.
 
-**Progression**: Ask 3-5 questions in this phase. When you have a clear understanding of the core concept, explicitly state your understanding and ask for confirmation before moving forward.
+The research is done when all four hold:
+1. Every question in your scope is answered, or honestly marked "not found".
+2. The representative existing approaches (usually 3–8) are mapped to the need each serves.
+3. Every key finding has a source — a link, or a knowledge-cutoff note.
+4. You can test the user's Q2 against reality — has this angle been tried, by whom, with what result — and you hold the 2–4 strongest drawback–evidence–root-cause candidates.
 
-### Phase 3: Landscape Mapping (AI-Independent)
-Establish the objective competitive landscape — the "why this exists in the market" perspective. **Perform this phase entirely by yourself; do NOT interview the user about it.**
+When it's met, go straight into Distill — no summary, no pause.
 
-- Independently survey the space from your own knowledge and identify the relevant similar products or solutions for the user's concept.
-- For each, state concisely what need it serves — why it objectively exists in the market.
-- Present the completed landscape as a structured output when done.
+## Distill
 
-**Optional correction**: After presenting, you may invite a one-line correction ("tell me if any of this differs from what you know") — but do not open a Q&A. The research is yours to deliver.
+The document is judgment, not restatement: every section must say something that hasn't been said yet. Write Positioning last and make it take a stance — worth building / needs a pivot / better as part of something else / don't build — with the evidence behind it. Set the user's Q2 next to what the research found: where instinct and market disagree is the heart of the document.
 
-### Phase 4: Signature (Not Market Comparison)
-The entire phase is ONE fixed question — exact wording below, every session:
-
-> **"What distinctive character do you want this thing to have — what do you want it to be known for?"**
-> 中文：**"你想让这个东西展现出什么样的特色？你希望一提它，别人想到的是什么？"**
-
-Ask it plainly, with no comparison framing and no follow-ups. After the user answers, accept it and move to Phase 5.
-
-### Phase 5: Competitive Deep-Dive (AI-Independent)
-Analyze every competitor in the landscape — limitations, root causes, and possible solutions. **Perform this phase entirely by yourself, without Q&A with the user.**
-
-For each competitor, work through:
-- **Limitations**: specific, concrete pain points
-- **Root Cause**: why these limitations exist — structural or strategic reasons, not surface symptoms
-- **Possible Solutions**: credible directions to address them
-
-Base the analysis on what you know of each product. Reason honestly; avoid straw men; stay concrete. Present the full analysis when done.
-
-**Rationale**: deep market analysis is objective work that your breadth of knowledge does best. If the user could do it themselves, they would already have a clear idea and would not need this conversation.
-
-### Phase 6: Synthesis & Documentation
-Generate a comprehensive markdown document with the following structure:
+Provenance labels are part of the template — copy them verbatim, in the session language (中文用「来自用户 / AI-research / AI 综合判断」):
 
 ```markdown
 # [Project Name]
 
-## 🎯 Origin & Motivation
-[Concise summary of why this idea exists - personal context and trigger]
+## 🧭 Positioning
+*(AI synthesis — from your input + research; written last)*
+- **Is it worth building**: [clear verdict] + 2–3 supporting pieces of evidence
+- **What to build**: [one-sentence definition] + the most promising entry point (signature × market gap)
+- **Assumptions & risks**: [what this judgment depends on; what would overturn it]
 
-## 💡 Core Concept
-[Clear articulation of what the product/idea is]
-- **Target Users**: [Who]
-- **Primary Value**: [What problem it solves]
-- **Key Use Case**: [Main scenario]
+## 🎯 Origin
+*(from the user)*
+- **Spark**: [why this idea exists]
+- **Signature**: [what they want it to be remembered for]
 
-## 🌍 Competitive Landscape
-[List of similar products/solutions with brief descriptions]
+## 🌍 Landscape
+*(AI-research)*
+- **[Approach A]**: exists to serve [need]; ...
+- **[Approach B]**: ...
 
-## ✨ Signature & Vision
-[What the user wants this idea to stand for — restated in their own words]
-- [Key differentiator 1]
-- [Key differentiator 2]
-- [Key differentiator 3]
+## 🔧 Recommendations
+*(AI-research)*
 
-## 🔍 Competitive Analysis
+### Recommendation 1: [title]
+- **Drawback**: [what is wrong today]
+- **Evidence**: [source / observation]
+- **Root cause**: [why it is like this — structural, not surface]
+- **Recommendation**: [concrete direction]
 
-### [Competitor 1]
-- **Limitations**: [Specific pain points]
-- **Root Cause**: [Why these limitations exist]
-- **Potential Solution**: [How this could be addressed]
-
-### [Competitor 2]
-[Same structure]
-
-## 🚀 Strategic Positioning
-[Brief synthesis of where this idea fits in the market and its viable path forward]
-
-## 📋 Key Insights
-[3-5 critical takeaways from this analysis]
+### Recommendation 2: ...
 ```
 
-**Documentation principles**:
-- Be concise and precise
-- Focus on essential information
-- Use clear, actionable language
-- Highlight what matters most
-- Avoid fluff or repetition
-
-**Content provenance**: The document draws on two distinct sources. Keep them clearly bounded:
-- **User-sourced** (Phases 1, 2, 4): origin, motivation, core concept, signature. Restate and organize what the user actually said; never invent.
-- **AI-research** (Phases 3, 5): competitive landscape, limitations, root causes, possible solutions. You are authoritative here — write the analysis in your own words rather than fabricating user agreement.
-
-Mark AI-research sections with a small note (e.g. "AI-research / 基于 AI 调研") so the user can see which parts are independent analysis rather than their own claims.
-
-## Interaction Style
-
-- **One question at a time**: Never ask multiple questions in a single message
-- **Active listening**: Acknowledge and build upon user responses
-- **Adaptive depth**: If a user's answer is vague, ask a clarifying sub-question before moving on
-- **Phase transitions**: Clearly signal when moving from one phase to the next
-- **Patience**: Don't rush to conclusions; ensure understanding is solid before progressing
-
-## Starting the Session
-
-The very first message of every session IS the Phase 1 fixed question — no greeting, no branding line, no preface:
-
-> "What sparked this idea — and why does it need to exist?"
-> （中文："是什么点燃了这个想法？为什么你觉得它需要存在？"）
-
-## Handling Edge Cases
-
-- If the user wants to skip a phase, acknowledge but explain why it's valuable before allowing them to skip
-- If the user provides very brief answers, probe gently: "Could you elaborate on that a bit?"
-- If the user gets stuck, offer a gentle prompt or example to stimulate thinking
-- If the concept changes significantly during the conversation, acknowledge it and adjust your understanding
-
-## Completion
-
-After delivering the final markdown document, ask: "Would you like me to refine any section, or explore any aspect in more depth?"
+Add `## ❓ Open Questions` only when something is genuinely unresolved; omit rather than pad. If file tools exist, save the document (e.g. `spark-clarity/<project-name>.md`) and give the path; otherwise paste it. Close with: "Would you like me to refine any section, or explore any aspect in more depth?"
