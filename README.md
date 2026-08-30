@@ -129,20 +129,12 @@ This creates a deliberate rhythm:
 
 ```text
 YOU
-Origin
-Concept
+Spark — two honest answers
+Frame — just enough to be understood
       ↓
 AI
-Landscape
-      ↓
-YOU
-Signature
-      ↓
-AI
-Deep Analysis
-      ↓
-TOGETHER
-Clarity
+Scout — the world around the idea
+Distill — a verdict, in writing
 ```
 
 The important part is not simply asking more questions.
@@ -220,13 +212,13 @@ What is needed first is exploration.
 ```text
 Where did this intuition come from?
         ↓
-What are you actually dissatisfied with?
+What do you want it to stand for?
         ↓
-What existing approaches already exist?
+A few questions — just enough to know what to look into
         ↓
-After seeing them, what still feels missing to you?
+Research into what already exists, and why it struggles
         ↓
-What do you want this idea to stand for?
+A document that takes a position
 ```
 
 ---
@@ -253,42 +245,30 @@ Either way, the user understands their own thinking better.
 
 # The Workflow
 
-Spark Clarity currently follows six phases:
+Spark Clarity currently follows four stages:
 
 ```text
-1. Origin
-   Why does this idea exist?
-   [Human]
+1. Spark
+   Where did this come from — and what should it stand for?
+   [Human — two fixed questions]
 
         ↓
 
-2. Concept
-   What are you actually imagining?
-   [Human]
+2. Frame
+   What must be understood before research begins?
+   [Human — only what's needed]
 
         ↓
 
-3. Landscape
-   What already exists in the world around this idea?
-   [AI]
+3. Scout
+   What already exists, and where does it struggle?
+   [AI — web-first, no interview]
 
         ↓
 
-4. Signature
-   After seeing the landscape, what do you want this to stand for?
-   [Human]
-
-        ↓
-
-5. Deep Dive
-   Where do existing approaches struggle, and why?
-   [AI]
-
-        ↓
-
-6. Synthesis
-   Bring the idea into a clear, structured form.
-   [AI + Human]
+4. Distill
+   What does it all mean — is it worth building?
+   [AI — a document with a verdict]
 ```
 
 The workflow is not meant to force every idea through the same rigid questionnaire.
@@ -303,16 +283,13 @@ until something becomes clear enough to think about consciously.
 
 # What You Get
 
-At the end of a session, Spark Clarity produces a structured concept document that may include:
+At the end of a session, Spark Clarity produces a structured concept document:
 
-- 🎯 **Origin & Motivation** — where the idea came from
-- 💡 **Core Concept** — what is actually being imagined
-- 🌍 **Landscape** — relevant existing approaches
-- ✨ **Signature** — what the user wants the idea to stand for
-- 🔍 **Analysis** — limitations, root causes, and opportunities
-- 🚀 **Positioning** — where the idea may fit
-- 📋 **Key Insights** — what became clear during the process
-- ❓ **Open Questions** — what remains unresolved
+- 🧭 **Positioning** — is it worth building, and what exactly? The verdict is written last, backed by evidence
+- 🎯 **Origin** — where the idea came from, and what you want it to stand for
+- 🌍 **Landscape** — what already exists, and the need each approach serves
+- 🔧 **Recommendations** — each one: drawback → evidence → root cause → what to do
+- ❓ **Open Questions** — included only where something is genuinely unresolved
 
 The output is not meant to replace thinking.
 
