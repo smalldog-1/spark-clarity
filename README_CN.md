@@ -409,12 +409,6 @@ Spark Clarity 背后的理念是：
 
 ---
 
-# 示例
-
-完整的对话示例见 [EXAMPLE.md](EXAMPLE.md)。
-
----
-
 # 贡献
 
 Spark Clarity 仍在演进。

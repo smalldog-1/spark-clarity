@@ -407,12 +407,6 @@ The philosophy behind Spark Clarity is:
 
 ---
 
-# Example
-
-See [EXAMPLE.md](EXAMPLE.md) for a complete conversation example.
-
----
-
 # Contributing
 
 Spark Clarity is still evolving.
